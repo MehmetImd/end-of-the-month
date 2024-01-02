@@ -17,6 +17,10 @@ app.use(cors({
     
 }))
 
+app.get("/", (req, res) => {
+    res.json("Hello");
+});
+
 //routes
 readdirSync('./routes').map((route) => app.use('/api/v1', require('./routes/' + route)))
 
