@@ -10,12 +10,7 @@ const PORT = process.env.PORT
 
 //middlewares
 app.use(express.json())
-app.use(cors({
-    origin: ["https://end-of-the-month-frontend.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true
-    
-}))
+app.use(cors());
 //routes
 readdirSync('./routes').map((route) => app.use('/api/v1', require('./routes/' + route)))
 
