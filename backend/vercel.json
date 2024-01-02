@@ -7,9 +7,9 @@
       }
     ],
     "rewrites": [
-      {
-        "src": "/(.*)",
-        "destination": "/"
-      }
+        {
+            "source": "/(.*)",
+            "destination": "/"
+        }
     ]
   }
